@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南京大学XX课题组</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* 导航栏 */
+        .navbar {
+            background-color: #003366;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+        /* 主图区域 */
+        .hero {
+            width: 100%;
+            max-height: 500px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        /* 内容区域 */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 菜单栏 -->
+    <nav class="navbar">
+        <a href="/">首页</a>
+        <a href="/research/">研究方向</a>
+        <a href="/team/">团队风采</a>
+        <a href="/publications/">研究成果</a>
+        <a href="/news/">新闻动态</a>
+        <a href="/join/">加入我们</a>
+    </nav>
+
+    <!-- 主图 -->
+    <div class="hero">
+        <img src="images/lab-photo.jpg" alt="实验室照片">
+    </div>
+
+    <!-- 简介 -->
+    <div class="container">
+        <div class="intro">
+            <h1>欢迎访问南京大学XX课题组</h1>
+            <p>我们专注于人工智能、机器学习等领域的研究，致力于推动前沿科技发展。</p>
+            <p>欢迎加入我们！</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 南京大学XX课题组 | 地址：南京市栖霞区仙林大道163号
+    </div>
+</body>
+</html>
