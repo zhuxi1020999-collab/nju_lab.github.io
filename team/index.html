@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队风采 - 南京大学高小钦课题组</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        /* 导航栏 (与主页一致) */
+        .navbar {
+            background-color: #003366;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+        /* 容器 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        /* 网格布局 */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        /* 成员卡片 */
+        .member-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .member-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            background-color: #e9ecef;
+        }
+        .member-info {
+            padding: 1.2rem;
+        }
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 0.25rem;
+        }
+        .member-role {
+            font-size: 0.9rem;
+            color: #6c757d;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .member-research {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
+        .member-bio {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .navbar a {
+                margin: 0 0.5rem;
+                font-size: 0.85rem;
+            }
+            .team-grid {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 (与主页完全一致) -->
+    <nav class="navbar">
+        <a href="/nju_lab.github.io/">首页</a>
+        <a href="/nju_lab.github.io/research/">研究方向</a>
+        <a href="/nju_lab.github.io/team/">团队风采</a>
+        <a href="/nju_lab.github.io/publications/">研究成果</a>
+        <a href="/nju_lab.github.io/news/">新闻动态</a>
+        <a href="/nju_lab.github.io/join/">加入我们</a>
+    </nav>
+
+    <div class="container">
+        <h1>团队风采</h1>
+        <div class="team-grid">
+            
+            <!-- 老师 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/prof_gao.jpg" alt="gxq">
+                <div class="member-info">
+                    <div class="member-name">高小钦 教授</div>
+                    <div class="member-role">博士生导师</div>
+                    <div class="member-research">研究方向：量子光学，量子纠缠，量子成像，量子计算，尤其在高维量子系统。理论和实验研究。</div>
+                    <div class="member-bio">博士生导师。
+国家海外高层次人才引进青年。
+迄今以第一或通讯作者身份发表Phys.Rev.Lett.等SCI学术论文17余篇。
+2017年-2020年在奥地利科学院诺贝尔物理学奖得主Anton Zeilinger课题组，高维量子信息研究。
+2020年-2024年在加拿大渥太华大学&加拿大国家研究委员会，高维量子光学理论与实验研究。</div>
+                </div>
+            </div>
+
+            <!-- 秘书 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/secretary.jpg" alt="zz">
+                <div class="member-info">
+                    <div class="member-name">朱珠</div>
+                    <div class="member-role">课题组秘书</div>
+                    <div class="member-research">负责实验室日常管理、财务、项目申报等</div>
+                    <div class="member-bio">热情高效，为课题组提供全方位的行政支持，确保研究顺利进行。</div>
+                </div>
+            </div>
+
+            <!-- 博士后 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/postdoc.jpg" alt="th">
+                <div class="member-info">
+                    <div class="member-name">唐昊 博士</div>
+                    <div class="member-role">博士后</div>
+                    <div class="member-research">研究方向：量子纠缠与非局域性，高维量子系统及其信息处理任务。</div>
+                    <div class="member-bio">2026年加入课题组，主要从事量子信息与量子光学方向研究，并对新技术与交叉学科问题保持浓厚兴趣。科研之外，他也喜欢阅读、音乐、电影，爬山等等。</div>
+                </div>
+            </div>
+
+            <!-- 研究生1 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/student1.jpg" alt="yty">
+                <div class="member-info">
+                    <div class="member-name">应天佑</div>
+                    <div class="member-role">硕士研究生 (2024级)</div>
+                    <div class="member-research">研究方向：量子搜索算法及量子逻辑电路搭建、高维光子量子态演化理论计算</div>
+                    <div class="member-bio">2024级硕士生，主攻理论计算方向，主要工作是设计实验方案并作理论结果计算与分析，对编程感兴趣，爱好看SF和二次元。</div>
+                </div>
+            </div>
+
+            <!-- 研究生2 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/student2.jpg" alt="zyf">
+                <div class="member-info">
+                    <div class="member-name">周玉凤</div>
+                    <div class="member-role">硕士研究生 (2025级)</div>
+                    <div class="member-research">研究方向：量子拓扑结构中的拓扑纠缠，主要关注拓扑物态中纠缠结构的刻画与演化</div>
+                    <div class="member-bio">研究兴趣包括量子拓扑结构与拓扑纠缠，探索拓扑体系中的非平凡纠缠性质。课余喜爱羽毛球和摄影，乐于在科研与生活之间寻找平衡与灵感。</div>
+                </div>
+            </div>
+
+            <!-- 研究生3 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/student3.jpg" alt="zjm">
+                <div class="member-info">
+                    <div class="member-name">庄捷敏</div>
+                    <div class="member-role">硕士研究生 (2026级)</div>
+                    <div class="member-research">研究方向：基于高维光子态的量子精密测量</div>
+                    <div class="member-bio">对量子信息以及量子精密测量感兴趣，重点关注光子的高维资源。</div>
+                </div>
+            </div>
+
+            <!-- 研究生4 -->
+            <div class="member-card">
+                <img class="member-photo" src="/nju_lab.github.io/images/team/student4.jpg" alt="ojy">
+                <div class="member-info">
+                    <div class="member-name">区靖愉</div>
+                    <div class="member-role">硕士研究生 (2026级)</div>
+                    <div class="member-research">研究方向：光量子计算，量子纠错的理论与仿真</div>
+                    <div class="member-bio">希望从事量子计算的理论与实验工作，喜爱攀岩、跑步、爬山。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 南京大学高小钦课题组 | 地址：南京市鼓楼区汉口路22号
+    </div>
+</body>
+</html>
