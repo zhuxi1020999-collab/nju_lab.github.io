@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 南京大学高小钦课题组</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        .navbar {
+            background-color: #003366;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .join-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 6px solid #003366;
+        }
+        .join-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .join-icon {
+            font-size: 1.6rem;
+            color: #003366;
+            min-width: 40px;
+            text-align: center;
+        }
+        .join-text {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.7;
+        }
+        .join-text a {
+            color: #0056b3;
+            text-decoration: none;
+            border-bottom: 1px dashed #0056b3;
+        }
+        .join-text a:hover {
+            border-bottom: 1px solid;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .navbar a {
+                margin: 0 0.5rem;
+                font-size: 0.85rem;
+            }
+            .join-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .join-icon {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/nju_lab.github.io/">首页</a>
+        <a href="/nju_lab.github.io/research/">研究方向</a>
+        <a href="/nju_lab.github.io/team/">团队风采</a>
+        <a href="/nju_lab.github.io/publications/">研究成果</a>
+        <a href="/nju_lab.github.io/news/">新闻动态</a>
+        <a href="/nju_lab.github.io/join/">加入我们</a>
+    </nav>
 
+    <div class="container">
+        <h1>加入我们</h1>
+        <div class="join-card">
+            <div class="join-item">
+                <div class="join-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="join-text">
+                    课题组计划每年招收硕士/博士研究生3-5名，欢迎感兴趣的学生加入课题组。<br>
+                    同时欢迎优秀的博士后/青年学者加入课题组，薪资待遇优厚。
+                </div>
+            </div>
+            <div class="join-item">
+                <div class="join-icon"><i class="fas fa-envelope"></i></div>
+                <div class="join-text">
+                    请将个人简历发至：<a href="mailto:xiaoqin.gao@nju.edu.cn">xiaoqin.gao@nju.edu.cn</a>
+                </div>
+            </div>
+            <div class="join-item">
+                <div class="join-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="join-text">
+                    地址：南京市汉口路22号南京大学物理学院
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 南京大学高小钦课题组 | 地址：南京市鼓楼区汉口路22号
+    </div>
+</body>
+</html>
