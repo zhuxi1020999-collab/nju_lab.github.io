@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻动态 - 南京大学高小钦课题组</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+        .navbar {
+            background-color: #003366;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        .sub {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .news-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            background-color: #e9ecef;
+        }
+        .card-title {
+            padding: 1rem 1rem 0.5rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #003366;
+        }
+        .card-detail {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 1rem;
+            background: #fefefe;
+            border-top: 1px solid #e9ecef;
+        }
+        .news-card.active .card-detail {
+            max-height: 1200px;
+            padding: 1rem;
+        }
+        .detail-content {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .detail-content p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+        .detail-meta {
+            background: #f1f3f5;
+            border-radius: 12px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+        }
+        .detail-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .detail-links a {
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .detail-links a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .navbar a {
+                margin: 0 0.5rem;
+                font-size: 0.85rem;
+            }
+            .news-grid {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/nju_lab.github.io/">首页</a>
+        <a href="/nju_lab.github.io/research/">研究方向</a>
+        <a href="/nju_lab.github.io/team/">团队风采</a>
+        <a href="/nju_lab.github.io/publications/">研究成果</a>
+        <a href="/nju_lab.github.io/news/">新闻动态</a>
+        <a href="/nju_lab.github.io/join/">加入我们</a>
+    </nav>
 
+    <div class="container">
+        <h1>新闻动态</h1>
+        <div class="sub">点击卡片查看详情</div>
+        <div class="news-grid" id="newsGrid">
+            <!-- 新闻卡片 1 -->
+            <div class="news-card">
+                <img class="card-img" src="/nju_lab.github.io/images/news/nature_photonics_2026.jpg" alt="Nature Photonics 论文配图">
+                <div class="card-title">高小钦和王慧田课题组在《Nature Photonics》发表高维光子量子门重要进展</div>
+                <div class="card-detail">
+                    <div class="detail-content">
+                        <div class="detail-meta">
+                            <strong>论文发表</strong><br>
+                            标题：<a href="https://www.nature.com/articles/s41566-026-01846-x" target="_blank" style="color: #0056b3; text-decoration: underline;">Heralded high-dimensional photon–photon quantum gate</a><br>
+                            期刊：Nature Photonics <strong>20</strong>, 460–467 (2026)<br>
+                            作者：刘志峰, 任志成, 万佩, 朱文正, 程子墨, 王静, 施宇鹏, 奚汉兵, Marcus Huber, Nicolai Friis, 高小钦, 王喜林, 王慧田
+                        </div>
+                        <p>近日，南京大学物理学院高小钦教授与王慧田教授课题组合作，在国际顶级学术期刊《Nature Photonics》上发表题为“Heralded high-dimensional photon-photon quantum gate”的研究论文。该工作首次实验实现了可宣告式的高维光子-光子量子受控相位翻转门，为高维光量子信息处理开辟了新路径。</p>
+                        <p>高维量子编码（qudit）能够在固定物理比特数下显著扩展量子态空间、减少纠缠门数量，是提升量子计算能力的有效途径。然而，光子之间缺乏直接相互作用，实现原生高维双光子纠缠门一直是光量子信息领域的重大挑战。</p>
+                        <p>研究团队提出并实验演示了一种适用于任意维度的双光子受控相位翻转门方案，成功实现了四维（ququart）纠缠门操作。该四维门功能上等价于至少需13个两比特门才能构建的量子线路。实验中，光子编码在轨道角动量自由度，团队自主开发了高精度主动相位锁定技术，构建了高维轨道角动量分束器，显著提升了干涉仪的稳定性。实测过程保真度达到0.71–0.85，远超经典界限，证实了门的纠缠产生能力。</p>
+                        <p>该成果标志着高维光量子计算从理论概念走向了实际实验实现，为未来可扩展的高维量子信息处理、量子网络及量子算法应用奠定了重要基础。</p>
+                        <div class="detail-links">
+                            <a href="https://www.nature.com/articles/s41566-026-01846-x" target="_blank"><i class="fas fa-external-link-alt"></i> 论文链接</a>
+                            <a href="/nju_lab.github.io/files/papers/2026.pdf" target="_blank"><i class="fas fa-file-pdf"></i> 下载PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 未来新增新闻时，复制上面的 .news-card 块并修改内容即可 -->
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 南京大学高小钦课题组 | 地址：南京市鼓楼区汉口路22号
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.news-card');
+        cards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
