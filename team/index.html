@@ -16,7 +16,7 @@
             color: #333;
             background-color: #fafafa;
         }
-        /* 导航栏 (与主页一致) */
+        /* 导航栏 */
         .navbar {
             background-color: #003366;
             padding: 1rem 2rem;
@@ -46,45 +46,51 @@
             margin-bottom: 2rem;
             font-size: 2rem;
         }
-        /* 网格布局 */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        /* 竖排列表 */
+        .member-list {
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
         }
-        /* 成员卡片 */
-        .member-card {
+        /* 每个成员项 */
+        .member-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
             background: white;
             border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
         }
-        .member-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        .member-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+        /* 照片 */
         .member-photo {
-            width: 100%;
-            aspect-ratio: 1 / 1;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
             object-fit: cover;
             background-color: #e9ecef;
+            flex-shrink: 0;
         }
-        .member-info {
-            padding: 1.2rem;
+        /* 文字区域 */
+        .member-details {
+            flex: 1;
         }
         .member-name {
             font-size: 1.3rem;
             font-weight: 700;
             color: #003366;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
         }
         .member-role {
             font-size: 0.9rem;
             color: #6c757d;
-            border-bottom: 1px solid #e9ecef;
-            padding-bottom: 0.5rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid #003366;
+            padding-left: 0.5rem;
         }
         .member-research {
             font-size: 0.9rem;
@@ -93,7 +99,7 @@
             margin-bottom: 0.5rem;
         }
         .member-bio {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #555;
             line-height: 1.5;
         }
@@ -104,19 +110,30 @@
             margin-top: 3rem;
             font-size: 0.9rem;
         }
+        /* 手机版：照片在上，文字在下 */
         @media (max-width: 768px) {
             .navbar a {
                 margin: 0 0.5rem;
                 font-size: 0.85rem;
             }
-            .team-grid {
-                gap: 1rem;
+            .member-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .member-photo {
+                width: 120px;
+                height: 120px;
+            }
+            .member-role {
+                border-left: none;
+                padding-left: 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 (与主页完全一致) -->
+    <!-- 导航栏 -->
     <nav class="navbar">
         <a href="/nju_lab.github.io/">首页</a>
         <a href="/nju_lab.github.io/research/">研究方向</a>
@@ -128,27 +145,29 @@
 
     <div class="container">
         <h1>团队风采</h1>
-        <div class="team-grid">
+        <div class="member-list">
             
             <!-- 老师 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/prof_gao.jpg" alt="gxq">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/gxq.jpg" alt="高小钦教授">
+                <div class="member-details">
                     <div class="member-name">高小钦 教授</div>
                     <div class="member-role">博士生导师</div>
                     <div class="member-research">研究方向：量子光学，量子纠缠，量子成像，量子计算，尤其在高维量子系统。理论和实验研究。</div>
-                    <div class="member-bio">博士生导师。
-国家海外高层次人才引进青年。
-迄今以第一或通讯作者身份发表Phys.Rev.Lett.等SCI学术论文17余篇。
-2017年-2020年在奥地利科学院诺贝尔物理学奖得主Anton Zeilinger课题组，高维量子信息研究。
-2020年-2024年在加拿大渥太华大学&加拿大国家研究委员会，高维量子光学理论与实验研究。</div>
+                    <div class="member-bio">
+                        博士生导师。<br>
+                        国家海外高层次人才引进青年。<br>
+                        迄今以第一或通讯作者身份发表Phys.Rev.Lett.等SCI学术论文17余篇。<br>
+                        2017年-2020年在奥地利科学院诺贝尔物理学奖得主Anton Zeilinger课题组，高维量子信息研究。<br>
+                        2020年-2024年在加拿大渥太华大学&加拿大国家研究委员会，高维量子光学理论与实验研究。
+                    </div>
                 </div>
             </div>
 
             <!-- 秘书 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/secretary.jpg" alt="zz">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/zz.jpg" alt="朱珠">
+                <div class="member-details">
                     <div class="member-name">朱珠</div>
                     <div class="member-role">课题组秘书</div>
                     <div class="member-research">负责实验室日常管理、财务、项目申报等</div>
@@ -157,9 +176,9 @@
             </div>
 
             <!-- 博士后 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/postdoc.jpg" alt="th">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/th.jpg" alt="唐昊博士">
+                <div class="member-details">
                     <div class="member-name">唐昊 博士</div>
                     <div class="member-role">博士后</div>
                     <div class="member-research">研究方向：量子纠缠与非局域性，高维量子系统及其信息处理任务。</div>
@@ -168,9 +187,9 @@
             </div>
 
             <!-- 研究生1 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/student1.jpg" alt="yty">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/yty.jpg" alt="应天佑">
+                <div class="member-details">
                     <div class="member-name">应天佑</div>
                     <div class="member-role">硕士研究生 (2024级)</div>
                     <div class="member-research">研究方向：量子搜索算法及量子逻辑电路搭建、高维光子量子态演化理论计算</div>
@@ -179,9 +198,9 @@
             </div>
 
             <!-- 研究生2 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/student2.jpg" alt="zyf">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/zyf.jpg" alt="周玉凤">
+                <div class="member-details">
                     <div class="member-name">周玉凤</div>
                     <div class="member-role">硕士研究生 (2025级)</div>
                     <div class="member-research">研究方向：量子拓扑结构中的拓扑纠缠，主要关注拓扑物态中纠缠结构的刻画与演化</div>
@@ -190,9 +209,9 @@
             </div>
 
             <!-- 研究生3 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/student3.jpg" alt="zjm">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/zjm.jpg" alt="庄捷敏">
+                <div class="member-details">
                     <div class="member-name">庄捷敏</div>
                     <div class="member-role">硕士研究生 (2026级)</div>
                     <div class="member-research">研究方向：基于高维光子态的量子精密测量</div>
@@ -201,9 +220,9 @@
             </div>
 
             <!-- 研究生4 -->
-            <div class="member-card">
-                <img class="member-photo" src="/nju_lab.github.io/images/team/student4.jpg" alt="ojy">
-                <div class="member-info">
+            <div class="member-item">
+                <img class="member-photo" src="../images/team/ojy.jpg" alt="区靖愉">
+                <div class="member-details">
                     <div class="member-name">区靖愉</div>
                     <div class="member-role">硕士研究生 (2026级)</div>
                     <div class="member-research">研究方向：光量子计算，量子纠错的理论与仿真</div>
