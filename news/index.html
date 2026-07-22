@@ -16,6 +16,9 @@
             line-height: 1.6;
             color: #333;
             background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .navbar {
             background-color: #003366;
@@ -41,6 +44,7 @@
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 20px;
+            flex: 1;
         }
         h1 {
             text-align: center;
@@ -130,8 +134,9 @@
             background-color: #f4f4f4;
             text-align: center;
             padding: 1rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
             font-size: 0.9rem;
+            width: 100%;
         }
         @media (max-width: 768px) {
             .navbar a {
@@ -145,6 +150,8 @@
     </style>
 </head>
 <body>
+
+    <!-- 导航栏 -->
     <nav class="navbar">
         <a href="/nju_lab.github.io/">首页</a>
         <a href="/nju_lab.github.io/research/">研究方向</a>
@@ -154,13 +161,15 @@
         <a href="/nju_lab.github.io/join/">加入我们</a>
     </nav>
 
+    <!-- 页面主要内容 -->
     <div class="container">
         <h1>新闻动态</h1>
         <div class="sub">点击卡片查看详情</div>
-        <div class="news-grid" id="newsGrid">
+
+        <div class="news-grid">
 
             <!-- 新闻卡片 1：Nature Photonics 论文 -->
-            <div class="news-card">            
+            <div class="news-card">
                 <img class="card-img" src="/nju_lab.github.io/images/team/n1.png" alt="Nature Photonics 论文配图">
                 <div class="card-title">高小钦和王慧田课题组在《Nature Photonics》发表高维光子量子门重要进展</div>
                 <div class="card-detail">
@@ -202,16 +211,17 @@
                         <p>祝贺课题组博士后唐昊博士荣获南京大学"毓秀青年学者"岗位资助！</p>
                         <p>唐昊博士2026年加入课题组，主要从事量子纠缠与非局域性、高维量子系统及其信息处理任务等方向的研究。毓秀青年学者岗位是南京大学为吸引和培养优秀青年人才设立的重要人才项目，旨在支持具有创新潜力的青年学者开展前沿科学研究。</p>
                         <p>此次获评是对唐昊博士学术能力和科研潜力的充分肯定，期待他在量子信息领域取得更多创新成果！</p>
-                        <div class="detail-links" style="margin-top: 0.8rem; gap: 0.8rem; flex-wrap: wrap;">
+                        <div class="detail-links">
                             <span style="background: #e8f0fe; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: #003366;">🏆 毓秀青年学者</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>  <!-- 关闭 news-grid -->
-    </div>      <!-- 关闭 container -->
+        </div>  <!-- 结束 news-grid -->
+    </div>      <!-- 结束 container -->
 
+    <!-- 页脚（独立于 container 之外，固定在页面底部） -->
     <div class="footer">
         &copy; 2026 南京大学高小钦课题组 | 地址：南京市鼓楼区汉口路22号
     </div>
@@ -225,5 +235,6 @@
             });
         });
     </script>
+
 </body>
 </html>
